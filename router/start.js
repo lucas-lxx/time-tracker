@@ -3,7 +3,7 @@ const { startTimer } = require('../model/start');
 
 const router = express.Router();
 
-router.get('/', (req, res, next) => {
+router.post('/', (req, res, next) => {
   startTimer();
   res.send("Time has been started!");
 });
