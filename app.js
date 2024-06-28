@@ -1,10 +1,10 @@
 require('dotenv').config();
 const express = require('express');
 
+const start_router = require('./router/start');
+
 const app = express();
 
-app.use('/', (req, res, next) => {
-  res.send('Hello Friend End!')
-});
+app.use('/start-timer', start_router);
 
 app.listen(process.env.PORT, process.env.HOST);
