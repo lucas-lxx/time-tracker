@@ -5,6 +5,6 @@ const start_router = require('./router/start');
 
 const app = express();
 
-app.use('/start-timer', start_router);
+app.use(start_router);
 
 app.listen(process.env.PORT, process.env.HOST);
